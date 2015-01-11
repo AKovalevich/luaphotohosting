@@ -7,6 +7,16 @@ config("development", {
         host = "127.0.0.1",
         user = "boo",
         password = "87654321",
-        database = "test"
+        database = "test",
     }
 })
+
+--config("production", {
+--    postgres = {
+--        backend = "pgmoon",
+--        host = "",
+--        user = "",
+--        password = "",
+--        database = "",
+--    }
+--})
