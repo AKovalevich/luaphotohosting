@@ -30,12 +30,11 @@ app:post("/api/v1/register", function(self)
                 message = helper.translate.t("Пароль должен быть больше 5 символов")
             else
                 local hash = helper.hash.get(request_password)
-                local user = Users:create_user({
-                    login = requset_login,
-                    password = hash,
-                    email = request_email,
-                    created = os.time()
-                })
+                local user = Users.create_user(
+                    request_password,
+                    requset_login,
+                    request_email
+                )
                 status = "ok"
                 message = "User created"
                 data = user

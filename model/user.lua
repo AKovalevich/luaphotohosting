@@ -18,7 +18,6 @@ Users.create_user = function(password, login, email, name, last_name)
         password = hash,
         email = email,
         created = os.time(),
-        email = email
 --        name = name,
 --        last_name = last_name,
 --        email = email
