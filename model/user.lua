@@ -33,6 +33,27 @@ Users.delete_user = function(uid)
     return data;
 end
 
+Users.get_user_by_id = function(uid)
+    if uid == nil then
+        return false
+    end
+    return Users:find({uid = uid})
+end
+
+Users.get_user_by_name = function(name)
+    if name == nil then
+        return false
+    end
+    return Users:find({name = name})
+end
+
+Users.update = function(data)
+    if data == nil then
+        return false
+    end
+    return Users:find(data)
+end
+
 return {
     Users = Users
 }
