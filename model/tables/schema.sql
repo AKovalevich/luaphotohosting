@@ -14,9 +14,11 @@ CREATE TABLE users (
 CREATE TABLE photo (
   pid INTEGER PRIMARY KEY DEFAULT NEXTVAL('pid'),
   creator_id INTEGER,
-  path CHAR(64),
+  file_name CHAR(64),
+  path CHAR(255),
   title CHAR(255),
   created INTEGER,
+  updated INTEGER,
   status INTEGER
 );
 
